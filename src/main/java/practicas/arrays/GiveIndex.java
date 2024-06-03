@@ -23,7 +23,7 @@ public class GiveIndex {
                 System.out.println(arr.get(arr.size() -2));
 
             }
-
+return null;
            //que pasa si
         }
     }
@@ -36,17 +36,15 @@ public class GiveIndex {
 
         arr1.add(20);
 
-        double position1 = 10 / 2;
+        double position1 = 3 / 2;
         System.out.println(valueAt(arr1, position1));
 
-        double position2 = 3/2;
-        List<Integer> arr2 = new ArrayList<>();
-        arr1.add(3);
-        arr1.add(1);
+        double position2 = 5 / 2;
+        System.out.println(valueAt(arr1, position1));
 
-        arr1.add(50);
-        arr1.add(50);
+        double position4 = 10 / 2;
+        System.out.println(valueAt(arr1, position1));
 
-        System.out.println(valueAt(arr2,position2));
+
     }
 }
