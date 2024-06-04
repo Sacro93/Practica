@@ -1,49 +1,39 @@
 package practicas.arrays;
 
-import java.util.ArrayList;
 import java.util.List;
+import static util.MyList.listOf;
 
 public class GiveIndex {
-    public static double numPosition(double a, double b){
-
-        return  a / b;
+    public static int numPosition(double a, double b){
+        return  (int) Math.floor(a/b);
     };
-    public static Integer valueAt(List<Integer>arr,double position){
 
+    //para ver mas adelante como poder tomar 2 parametros en la funcion valueAt
+    public static Integer valueAt(List<Integer>arr,double a,double b){
+        int position =  numPosition(a,b);
         if (!arr.isEmpty() && (position >= 0) && (position < arr.size())){
-            //con math devuelve el numero entero mas grande menor o igual;
 
-            int i = (int) Math.floor(position);
-
-       return arr.get(i);
+       return arr.get(position);
         }else {
             if (!arr.isEmpty() && position > arr.size()){
-                System.out.println("No existe un numero para el rango dado");
-
-                System.out.println(arr.get(arr.size() -2));
+              arr.get(numPosition((double) arr.size() , -2.0));
 
             }
 return null;
-           //que pasa si
+
         }
     }
 
     public static void main(String[] args) {
 
-        List<Integer> arr1 = new ArrayList<>();
-        arr1.add(3);
-        arr1.add(2);
+        List<Integer> arr1 = listOf(10,20,30,40,50);
 
-        arr1.add(20);
 
-        double position1 = 3 / 2;
-        System.out.println(valueAt(arr1, position1));
 
-        double position2 = 5 / 2;
-        System.out.println(valueAt(arr1, position1));
-
-        double position4 = 10 / 2;
-        System.out.println(valueAt(arr1, position1));
+        System.out.println(valueAt(arr1, 6,2));
+        System.out.println(valueAt(arr1, 6,100));
+        System.out.println(valueAt(arr1, 100,100));
+        System.out.println(valueAt(arr1, 10,3));
 
 
     }
