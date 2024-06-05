@@ -4,11 +4,7 @@ public class AreEquals {
 
     public static boolean IsSameNum(int a, int b){
 
-        if (a != b) {
-            return false;
-        } else {
-            return true;
-        }
+       return a == b;
     }
 
     public static void main(String[] args){

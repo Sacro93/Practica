@@ -20,10 +20,6 @@ checkSquareAndCube([9, 27]) ➞ true
 */
 public class SquaresCubes {
 
-    //primero sacar la raiz cuadrada
-
-    //segundo sacar la raiz cubica
-    //tercero comparar
 
     public static boolean checkSquareAndCube(List<Integer>array){
         double numero1 = array.get(0);

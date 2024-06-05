@@ -8,7 +8,6 @@ import java.util.List;
  */
 public class LastElement {
 
-List<Integer>arr= new ArrayList<>();
 
 public static Integer lastElement(List<Integer> arr){
 

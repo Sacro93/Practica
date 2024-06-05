@@ -13,8 +13,6 @@ sum([45, 3, 0]) ➞ 48
 sum([-2, 84, 23]) ➞ 105*/
 public class SumAllElementsArray {
 
-    List<Integer> arr;
-
     public static int sum(List<Integer> arr){
         int acumulador= 0 ;
         for( Integer numero : arr){
