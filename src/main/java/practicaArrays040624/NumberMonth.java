@@ -11,16 +11,22 @@ public class NumberMonth {
 
     //primero funcion que tome un numero entero y devuelva un string
     //segundo el umero es una posicion del array de meses
+
+    private static List<String> meses = listOf("January","February","March","April","May","June", "July","August","September","October","November","December");
+
+    public static List<String> getMeses() {
+        return meses;
+    }
+
     public static String monthName(int posicion){
 
-        List<String> meses = listOf("January","February","March","April","May","June", "July","August","September","October","November","December");
 
         if (posicion < 0 || posicion >12)  {
             throw new IllegalArgumentException("Recorda que existen 12 meses");
         }
 
 
-        return meses.get(posicion - 1);
+        return getMeses().get(posicion);
 
 
     }

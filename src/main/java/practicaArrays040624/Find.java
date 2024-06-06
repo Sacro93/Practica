@@ -16,12 +16,27 @@ findIndex(new String[]{"a", "g", "y", "d"}, "d") ➞ 3
 
 findIndex(new String[]{"Pineapple", "Orange", "Grape", "Apple"}, "Pineapple")*/
 public class Find {
-    public static int findIndex(List<String> arr, String arg) {
+//    public static int findIndex(List<String> arr, String arg) {
+//
+//        int index = arr.indexOf(arg);
+//        return index;
+//    }
 
-        int index = arr.indexOf(arg);
-        return index;
+    public static int findIndex(List<String>arr ,String arg){
+int index=0;
+
+        for (int i = 0; i < arr.size() ; i++) {
+
+            if (arr.get(i).equals(arg)){
+               index = i;
+               break;
+            }
+
+        }
+
+        return  index;
+
     }
-
     public static void main(String[] args) {
 
         List<String> array = listOf("hi", "edabit", "fgh", "abc");

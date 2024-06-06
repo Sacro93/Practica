@@ -24,11 +24,10 @@ public class TrueFalse {
             if (str.charAt(i) == '1'){
 
                 trueFalse[i] =true;
-            }else if ( str.charAt(i) == '0'){
-                trueFalse[i] = false;
+            }
             }
 
-        }
+
         return trueFalse;
     }
 
