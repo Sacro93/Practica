@@ -10,11 +10,13 @@ public class CaptureRock {
 
     //Debo crear una funcion que recibe un Array y devuelve un boolean
 
-    // debo entrar al array y comparar los datos , si estan en la misma columna ok [a8,e8]
+    // debo separar el arran con char,
+    // iterar con for each cada caracter
+    //luego comparar el array list
 
     public static boolean canCapture(List<String> arr) {
 
-        List<Character> charList =new ArrayList<>();
+        List<Character> charList = new ArrayList<>();
 
 
         for (String str : arr) {
