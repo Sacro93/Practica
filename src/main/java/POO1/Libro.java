@@ -11,13 +11,21 @@ public class Libro {
         this.autor = autor;
         this.anioPublicacion = anioPublicacion;
     }
-    public static void mostrarDetalles(Libro objeto){
 
-       System.out.println(objeto);
+    // Metodo: refleja un comportamiento de la clase
+    public void mostrarDetalles(){
+        // this apunta a la instancia sobre la que llamo el metodo
+        // 1ro librito 1
+        // 2ndo librito 2
+
+        // Imprimiendo la instancia en la que estoy parado
+        String detalle = "Título: " + this.titulo + ", Autor: " + this.autor + ", Año de Publicación: " + this.anioPublicacion;
+        System.out.println(detalle);
     }
 
-    public String toString() {
-        return "Título: " + titulo + ", Autor: " + autor + ", Año de Publicación: " + anioPublicacion;
+    public int aniosDesdePublicacion(int anioActual) {
+        return anioActual - this.anioPublicacion;
     }
+
 
 }

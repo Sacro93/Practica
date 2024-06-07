@@ -6,16 +6,15 @@ public class Estudiante {
     private String grado;
 
 
-    public Estudiante(String n, int e, String g) {
+    public Estudiante(String nombre, int edad, String grado) {
 
-        this.nombre = n;
-        this.edad = e;
-        this.grado = g;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.grado = grado;
     }
 
-    public static void mostrarInformacion(Estudiante estudiante) {
-
-        System.out.println(estudiante);
+    public int getEdad() {
+        return edad;
     }
 
     public String toString(){
