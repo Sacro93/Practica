@@ -24,6 +24,8 @@ public class Empleado {
 
     }
 
+
+
 //    public void pagoPorHsExtras() {
 //        int valorTotal = horasExtrasMes * valorHoraExtra;
 //        System.out.println(valorTotal);
@@ -65,26 +67,40 @@ public class Empleado {
 
     public double sueldoNeto() {
 
-        return  sueldoBruto() - calculoRetenciones();
+        return sueldoBruto() - calculoRetenciones();
 
 
     }
 
+
     public void imprimirInfoBasica() {
-        System.out.println("NIF : " + nif + " , Sueldo base : " +
-                sueldoBase + ", Casado: " + casado + ", Hijos: " + numHijos);
+        System.out.println("NIF : " + nif + " , Sueldo base : " + sueldoBase + ", Casado: " + casado + ", Hijos: " + numHijos);
 
     }
 
     public void allInformation() {
-        System.out.println("NIF : " + nif + " , Sueldo base : " +
-                sueldoBase + ", Casado: " + casado + ", Hijos: " + numHijos + ", Horas extras trabajadas " + horasExtrasMes + ", Valor hora: " + valorHoraExtra +
-                "€" + ", Pago por horas extras: " + pagoPorHorasExtras() + "€" + ", Sueldo Bruto: " + sueldoBruto() + "€" +
-                ", Retenciones : " + calculoRetenciones() + "€" +
-                ", Sueldo Neto : " + sueldoNeto() + "€");
+        System.out.println("NIF : " + nif + " , Sueldo base : " + sueldoBase + ", Casado: " + casado + ", Hijos: " + numHijos + ", Horas extras trabajadas " + horasExtrasMes + ", Valor hora: " + valorHoraExtra + "€" + ", Pago por horas extras: " + pagoPorHorasExtras() + "€" + ", Sueldo Bruto: " + sueldoBruto() + "€" + ", Retenciones : " + calculoRetenciones() + "€" + ", Sueldo Neto : " + sueldoNeto() + "€");
 
     }
 
+    //metodo copia
+
+//    public Empleado copia(Empleado empleadito){
+//
+//          empleadito= new Empleado();
+//        imprimirInfoBasica();
+//
+//        return empleadito;
+//
+//
+//    }
+
+    public Empleado copia( ){
+
+        return new Empleado();
+
+
+    }
 
     //getter y setters
 

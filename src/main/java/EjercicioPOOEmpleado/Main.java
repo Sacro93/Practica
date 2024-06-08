@@ -10,10 +10,10 @@ public class Main {
         System.out.println( "Pago por hs extras :" + nicolas.pagoPorHorasExtras());
         System.out.println( "Sueldo Bruto : " + nicolas.sueldoBruto());
         System.out.println( "Retenciones : " +nicolas.calculoRetenciones());
-        nicolas.imprimirInfoBasica();
-        nicolas.sueldoNeto();
-        nicolas.allInformation();
-
+//        nicolas.imprimirInfoBasica();
+//        nicolas.sueldoNeto();
+//        nicolas.allInformation();
+        System.out.println(  nicolas.copia());
 
     }
 }
