@@ -8,21 +8,14 @@ Atributos:
 ArrayList<Libro> libros (referencia a la clase Libro)
 ArrayList<Autor> autores (referencia a la clase Autor)
 ArrayList<Categoria> categorias (referencia a la clase Categoria)
-
-Métodos:
-
-
-
-
-
-Método listarAutores() que imprima todos los autores en la biblioteca.
-Método listarCategorias() que imprima todas las categorías en la biblioteca.*/
+*/
 public class Biblioteca {
     private List<Libro> libros;
     private List<Autor> autores;
     private List<Categorias> categoria;
 
     //Constructor que inicialice las listas vacías.
+    public Biblioteca(){}
     public Biblioteca(List<Libro> libros, List<Autor> autores, List<Categorias> categorias) {
         this.libros = libros;
         this.autores = autores;
@@ -41,23 +34,43 @@ public class Biblioteca {
     public void agregarAutor(Autor autor) {
         this.autores.add(autor);
     }
-   // Método agregarCategoria(Categoria categoria) que añada una categoría a la lista de categorías de la biblioteca.
+    // Método agregarCategoria(Categoria categoria) que añada una categoría a la lista de categorías de la biblioteca.
 
-    public void agregarCategoria(Categorias categoria){
+    public void agregarCategoria(Categorias categoria) {
         this.categoria.add(categoria);
     }
 
-   // Método listarLibros() que imprima todos los libros en la biblioteca.
+    // Método listarLibros() que imprima todos los libros en la biblioteca.
 
-//    public void listarLibros( List<Libro> libritos){
-//        for (int i = 0; i < libritos.size(); i++) {
-//           libritos.get(i);
-//        }
-//
-//    }
+    public void listarLibros() {
+        for (Libro libro : this.libros) {
+            System.out.println(libro);
+        }
+    }
 //o :
-    public List<Libro> listarLibros(List<Libro> librazo){
-        return librazo;
+//    public List<Libro> listarLibros(List<Libro> librazo){
+//        return librazo;
+//    }
+    //    Método listarAutores() que imprima todos los autores en la biblioteca.
+//se que esta mal imprimir
+    public void listarAutores(List<Autor> autorcitos) {
+        for (Autor autor : autorcitos) {
+            System.out.println(autor);
+        }
     }
 
+    //seria asi sino?
+//    public List<Autor> listarLibros(List<Autor> autorcitos) {
+//
+//        return autorcitos;
+//    }
+
+
+   // Método listarCategorias() que imprima todas las categorías en la biblioteca.
+
+    public void listarCategorias(List<Categorias> cate){
+        for ( Categorias categorias:cate){
+            System.out.println(categorias);
+        }
+    }
 }
