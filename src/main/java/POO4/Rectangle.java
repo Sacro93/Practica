@@ -8,42 +8,37 @@ package POO4;
  * */
 public class Rectangle {
 
-    private float length;
+    private float height;
     private float width;
 
-    public Rectangle() {
-    }
-
     public Rectangle(float length, float width) {
-        this.length = length;
+        this.height = length;
         this.width = width;
     }
     //metodos
 
     public double getArea() {
 
-        double resultado = length*width;
-        System.out.println(resultado);
+   return  height*width;
 
-        return  resultado;
 
     }
 
-    public float getPerimeter() {
+    public double getPerimeter() {
 
-        double resultado = (2 * (length * width));
-        System.out.println(resultado);
-        return (float) resultado;
+        double resultado = (2*width+ 2*height);
+
+        return  resultado;
     }
 
 
     //getter and setter
     public float getLength() {
-        return length;
+        return height;
     }
 
     public void setLength(float length) {
-        this.length = length;
+        this.height = length;
     }
 
     public float getWidth() {
@@ -56,7 +51,7 @@ public class Rectangle {
 
     public String toString() {
 
-       return  "Datos Rectangulo" + "Altura : " + this.length + "," + "Ancho : " + this.width + " , " +
+       return  "Datos Rectangulo" + "Altura : " + this.height + "," + "Ancho : " + this.width + " , " +
                 "Resultado Area : " + getArea() + " , " + "Resultado Perimetro : " + getPerimeter();
     }
 }

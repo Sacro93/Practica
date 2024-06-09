@@ -1,67 +1,68 @@
 package EjercicioPOOEmpleado;
 
 public class Empleado {
-    private int nif;
-    private int sueldoBase;
-    private int valorHoraExtra = 9;
+    private String nif;
+    private String dni;
+    private double sueldoBase;
+    private double valorHoraExtra = 9.0;
     private int horasExtrasMes;
-    private int percepcionIRPF;
+    private double percepcionIRPF;
     private boolean casado;
     private int numHijos;
 
 
-    public Empleado() {
-
+    public Empleado(double percepcionIRPF, String nif, double sueldoBase, boolean casado, int numHijos, int horasExtrasMes) {
+    this(percepcionIRPF, nif,sueldoBase,casado,numHijos,horasExtrasMes,null);
     }
-
-    public Empleado(int nif, int sueldoBase, boolean casado, int numHijos, int horasExtrasMes) {
-
+    public Empleado(double percepcionIRPF, String nif,double sueldoBase, boolean casado, int numHijos, int horasExtrasMes,String dni) {
+        this.percepcionIRPF = percepcionIRPF;
         this.nif = nif;
         this.sueldoBase = sueldoBase;
         this.casado = casado;
         this.numHijos = numHijos;
         this.horasExtrasMes = horasExtrasMes;
-
+        this.dni = dni;
     }
 
 
-
-//    public void pagoPorHsExtras() {
-//        int valorTotal = horasExtrasMes * valorHoraExtra;
-//        System.out.println(valorTotal);
-//
-//    }
-
-    public int pagoPorHorasExtras() {
+    public double pagoPorHorasExtras() {
         return horasExtrasMes * valorHoraExtra;
     }
 
-    public int sueldoBruto() {
+    public double    sueldoBruto() {
         return sueldoBase + pagoPorHorasExtras();
 
     }
 
-    public int calculoRetenciones() {
-        double retencionBase = 0.05;
-        double retencionEspecial = 0.02;
-
-
-        double retencion = sueldoBruto() * retencionBase;
-
-        if (casado) {
-
-            retencion -= sueldoBruto() * retencionEspecial;
-
+    public double calculoRetenciones() {
+        double percepcion = this.percepcionIRPF; // 25
+        if (this.casado) {
+            percepcion -= 2; // 23
         }
-        //resta 1 punto por cada hijo adicional
-        retencion -= sueldoBruto() * numHijos * 0.01;
+        percepcion -= this.numHijos; // 21
 
-        //retencion a cero
-        if (retencion < 0) {
+        return this.sueldoBruto() * percepcion / 100;
 
-            retencion = 0;
-        }
-        return (int) retencion;
+//        double retencionBase = 0.05;
+//        double retencionEspecial = 0.02;
+//
+//
+//        double retencion = sueldoBruto() * retencionBase;
+//
+//        if (casado) {
+//
+//            retencion -= sueldoBruto() * retencionEspecial;
+//
+//        }
+//        //resta 1 punto por cada hijo adicional
+//        retencion -= sueldoBruto() * numHijos * 0.01;
+//
+//        //retencion a cero
+//        if (retencion < 0) {
+//
+//            retencion = 0;
+//        }
+//        return (int) retencion;
 
     }
 
@@ -74,13 +75,20 @@ public class Empleado {
 
 
     public void imprimirInfoBasica() {
-        System.out.println("NIF : " + nif + " , Sueldo base : " + sueldoBase + ", Casado: " + casado + ", Hijos: " + numHijos);
-
+        //System.out.println("NIF : " + nif + " , Sueldo base : " + sueldoBase + ", Casado: " + casado + ", Hijos: " + numHijos);
+        System.out.println("nif = " + nif);
+        System.out.println("sueldoBase = " + sueldoBase);
+        System.out.println("casado = " + casado);
+        System.out.println("numHijos = " + numHijos);
     }
 
     public void allInformation() {
-        System.out.println("NIF : " + nif + " , Sueldo base : " + sueldoBase + ", Casado: " + casado + ", Hijos: " + numHijos + ", Horas extras trabajadas " + horasExtrasMes + ", Valor hora: " + valorHoraExtra + "€" + ", Pago por horas extras: " + pagoPorHorasExtras() + "€" + ", Sueldo Bruto: " + sueldoBruto() + "€" + ", Retenciones : " + calculoRetenciones() + "€" + ", Sueldo Neto : " + sueldoNeto() + "€");
-
+        //System.out.println("NIF : " + nif + " , Sueldo base : " + sueldoBase + ", Casado: " + casado + ", Hijos: " + numHijos + ", Horas extras trabajadas " + horasExtrasMes + ", Valor hora: " + valorHoraExtra + "€" + ", Pago por horas extras: " + pagoPorHorasExtras() + "€" + ", Sueldo Bruto: " + sueldoBruto() + "€" + ", Retenciones : " + calculoRetenciones() + "€" + ", Sueldo Neto : " + sueldoNeto() + "€");
+        imprimirInfoBasica();
+        System.out.println("horasExtrasMes = " + horasExtrasMes);
+        System.out.println("valorHoraExtra = " + valorHoraExtra);
+        System.out.println("pagoPorHorasExtras() = " + pagoPorHorasExtras());
+        System.out.println("calculoRetenciones() = " + calculoRetenciones());
     }
 
     //metodo copia
@@ -88,77 +96,23 @@ public class Empleado {
 //    public Empleado copia(Empleado empleadito){
 //
 //          empleadito= new Empleado();
-//        imprimirInfoBasica();
+//
 //
 //        return empleadito;
 //
 //
 //    }
 
-    public Empleado copia( ){
+    public Empleado copia() {
 
-        return new Empleado();
+        return new Empleado(this.percepcionIRPF, this.nif, this.sueldoBase, this.casado, this.numHijos, this.horasExtrasMes, this.dni);
 
 
     }
 
     //getter y setters
 
-    public int getNif() {
-        return nif;
-    }
 
-    public void setNif(int nif) {
-        this.nif = nif;
-    }
-
-    public int getSueldoBase() {
-        return sueldoBase;
-    }
-
-    public void setSueldoBase(int sueldoBase) {
-        this.sueldoBase = sueldoBase;
-    }
-
-    public double getValorHoraExtra() {
-        return valorHoraExtra;
-    }
-
-    public void setValorHoraExtra(double valorHoraExtra) {
-        this.valorHoraExtra = (int) valorHoraExtra;
-    }
-
-    public double getHorasExtrasMes() {
-        return horasExtrasMes;
-    }
-
-    public void setHorasExtrasMes(double horasExtrasMes) {
-        this.horasExtrasMes = (int) horasExtrasMes;
-    }
-
-    public int getPercepcionIRPF() {
-        return percepcionIRPF;
-    }
-
-    public void setPercepcionIRPF(int percepcionIRPF) {
-        this.percepcionIRPF = percepcionIRPF;
-    }
-
-    public boolean isCasado() {
-        return casado;
-    }
-
-    public void setCasado(boolean casado) {
-        this.casado = casado;
-    }
-
-    public int getNumHijos() {
-        return numHijos;
-    }
-
-    public void setNumHijos(int numHijos) {
-        this.numHijos = numHijos;
-    }
 
 
 }
