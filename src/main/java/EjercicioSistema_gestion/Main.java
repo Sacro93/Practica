@@ -33,8 +33,6 @@ public class Main {
         );
 
 
-        //teoria que busque
-
         /*El método Arrays.asList() en Java se utiliza para convertir un arreglo (array)
         o una secuencia de elementos en una lista. En este caso, categorias.get(0) devuelve el primer elemento de la
         lista categorias, que es un objeto de tipo Categoria.Entonces, Arrays.asList(categorias.get(0)) toma ese objeto Categoria y lo convierte en una lista que
@@ -72,7 +70,7 @@ public class Main {
 
         //Listar todos los libros, autores y categorías presentes en la biblioteca
 
-        bibliotecaza.listarLibros();
+//        bibliotecaza.listarLibros();
 
     }
 }

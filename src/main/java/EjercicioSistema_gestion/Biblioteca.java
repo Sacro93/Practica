@@ -15,7 +15,9 @@ public class Biblioteca {
     private List<Categorias> categoria;
 
     //Constructor que inicialice las listas vacías.
-    public Biblioteca(){}
+    public Biblioteca() {
+    }
+
     public Biblioteca(List<Libro> libros, List<Autor> autores, List<Categorias> categorias) {
         this.libros = libros;
         this.autores = autores;
@@ -36,8 +38,16 @@ public class Biblioteca {
     }
     // Método agregarCategoria(Categoria categoria) que añada una categoría a la lista de categorías de la biblioteca.
 
-    public void agregarCategoria(List<Categorias> categorias) {
-        this.categoria.addAll(categorias);
+//    public void agregarCategoria(List<Categorias> categoria) {
+//        this.categoria.addAll(categoria);
+//    }
+
+    //esta bien ???
+    public void agregarCategoria(List<Categorias> categorias){
+        for (Categorias categoria : categorias){
+            categorias.add(categoria);
+
+        }
     }
 
     // Método listarLibros() que imprima todos los libros en la biblioteca.
@@ -47,12 +57,14 @@ public class Biblioteca {
             System.out.println(libro);
         }
     }
-//o :
+
+    //o :
 //    public List<Libro> listarLibros(List<Libro> librazo){
-//        return librazo;
-//    }
-    //    Método listarAutores() que imprima todos los autores en la biblioteca.
+//        return librazo; }
+//   Método listarAutores() que imprima todos los autores en la biblioteca.
 //se que esta mal imprimir
+
+
     public void listarAutores(List<Autor> autorcitos) {
         for (Autor autor : autorcitos) {
             System.out.println(autor);
@@ -66,11 +78,20 @@ public class Biblioteca {
 //    }
 
 
-   // Método listarCategorias() que imprima todas las categorías en la biblioteca.
+    // Método listarCategorias() que imprima todas las categorías en la biblioteca.
 
-    public void listarCategorias(List<Categorias> cate){
-        for ( Categorias categorias:cate){
+    public void listarCategorias(List<Categorias> cate) {
+        for (Categorias categorias : cate) {
             System.out.println(categorias);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Biblioteca{" +
+                "libros=" + libros +
+                ", autores=" + autores +
+                ", categoria=" + categoria +
+                '}';
     }
 }
