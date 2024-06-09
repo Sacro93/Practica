@@ -36,8 +36,8 @@ public class Biblioteca {
     }
     // Método agregarCategoria(Categoria categoria) que añada una categoría a la lista de categorías de la biblioteca.
 
-    public void agregarCategoria(Categorias categoria) {
-        this.categoria.add(categoria);
+    public void agregarCategoria(List<Categorias> categorias) {
+        this.categoria.addAll(categorias);
     }
 
     // Método listarLibros() que imprima todos los libros en la biblioteca.

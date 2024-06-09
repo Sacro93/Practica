@@ -25,7 +25,7 @@ public class Main {
                 new Autor("Pedro", "Gonzalez")
         );
 
-        List<Categorias> categorias = listOf(
+        List<Categorias> categoriasNuevas = listOf(
                 new Categorias("Terror"),
                 new Categorias("Romance"),
                 new Categorias("Comedia"),
@@ -40,22 +40,22 @@ public class Main {
         lista categorias, que es un objeto de tipo Categoria.Entonces, Arrays.asList(categorias.get(0)) toma ese objeto Categoria y lo convierte en una lista que
          contiene un único elemento, que es el objeto Categoria obtenido de categorias.get(0).*/
         List<Libro> librazos = listOf(
-                new Libro("jamas", "123", autorcitos.get(1), Arrays.asList(categorias.get(0))),
-                new Libro("Nunca", "444", autorcitos.get(1), Arrays.asList(categorias.get(1))),
-                new Libro("Holii", "55", autorcitos.get(0), Arrays.asList(categorias.get(1))),
-                new Libro("See", "41", autorcitos.get(0), Arrays.asList(categorias.get(2))),
-                new Libro("Siempre", "10", autorcitos.get(2), Arrays.asList(categorias.get(3))),
-                new Libro("Algo", "1", autorcitos.get(3), Arrays.asList(categorias.get(3)))
+                new Libro("jamas", "123", autorcitos.get(1), Arrays.asList(categoriasNuevas.get(0))),
+                new Libro("Nunca", "444", autorcitos.get(1), Arrays.asList(categoriasNuevas.get(1))),
+                new Libro("Holii", "55", autorcitos.get(0), Arrays.asList(categoriasNuevas.get(1))),
+                new Libro("See", "41", autorcitos.get(0), Arrays.asList(categoriasNuevas.get(2))),
+                new Libro("Siempre", "10", autorcitos.get(2), Arrays.asList(categoriasNuevas.get(3))),
+                new Libro("Algo", "1", autorcitos.get(3), Arrays.asList(categoriasNuevas.get(3)))
         );
 
 
     //Agregar autores, libros y categorías a la biblioteca.
 
         Biblioteca bibliotecaza=new Biblioteca();
-        bibliotecaza.agregarCategoria(
-        bibliotecaza.agregarCategoria(categorias.get(1));
-        bibliotecaza.agregarCategoria(categorias.get(2));
-        bibliotecaza.agregarCategoria(categorias.get(3));
+
+
+        bibliotecaza.agregarCategoria(categoriasNuevas);
+
 
         bibliotecaza.agregarAutor(autorcitos.get(0));
         bibliotecaza.agregarAutor(autorcitos.get(1));
