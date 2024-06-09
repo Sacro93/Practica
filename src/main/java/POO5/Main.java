@@ -3,12 +3,19 @@ package POO5;
 public class Main {
     public static void main(String[] args) {
 
-        Author autorcito = new Author(" Fran , ", "fran@gmail.com ,", 'm');
+//        Author autorcito = new Author(" Fran , ", "fran@gmail.com ,", 'm');
+//
+//    Book librito= new Book("Java for dummy", autorcito,15.50,99);
+//
+//        System.out.println(librito.getAuthorMail());
+//        System.out.println(librito.getAuthor().getName());
+//        System.out.println(librito.getPrice());
 
-    Book librito= new Book("Java for dummy", autorcito,15.50,99);
+        Author[] authors = new Author[2];
+        authors[0] = new Author("Tan Ah Teck ,", "AhTeck@somewhere.com ,", 'm');
+        authors[1] = new Author("Paul Tan ,", ",Paul@nowhere.com", 'm');
+        Book2 javaDummy = new Book2("Java for Dummy ,", authors, 19.99, 99);
 
-        System.out.println(librito.getAuthorMail());
-        System.out.println(librito.getAuthor().getName());
-        System.out.println(librito.getPrice());
+        System.out.println(javaDummy.toString());
     }
 }

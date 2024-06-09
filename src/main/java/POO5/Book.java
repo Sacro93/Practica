@@ -26,6 +26,7 @@ public class Book {
         this.qty = qty;
     }
 
+    // (Advanced) The Author and Book Classes Again - An Array of Objects as an Instance Variable
 
     /*Introduce new methods called getAuthorName(),
     getAuthorEmail(), getAuthorGender()

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <p>
+
+        Ejercicio de Programación Orientada a Objetos
+        Contexto:
+        Imagina que estás desarrollando un sistema de gestión para una biblioteca. En este sistema, necesitarás gestionar libros, autores y categorías. Cada autor puede haber escrito múltiples libros, y cada libro puede pertenecer a una o más categorías.
+
+        Requisitos:
+        Clase Libro:
+
+        Atributos:
+        String titulo
+        String isbn
+        Autor autor (referencia a la clase Autor)
+        ArrayList<Categoria> categorias (referencia a la clase Categoria)
+        Métodos:
+        Constructor que inicialice todos los atributos.
+        Métodos getter y setter para cada atributo.
+        Método toString() para imprimir los detalles del libro.
+        Clase Autor:
+
+        Atributos:
+        String nombre
+        String apellido
+        ArrayList<Libro> libros (referencia a la clase Libro)
+            Métodos:
+            Constructor que inicialice nombre y apellido.
+            Métodos getter y setter para cada atributo.
+            Método agregarLibro(Libro libro) que añada un libro a la lista de libros del autor.
+            Método toString() para imprimir los detalles del autor.
+            Clase Categoria:
+
+            Atributos:
+            String nombre
+            Métodos:
+            Constructor que inicialice el nombre.
+            Método getter y setter para el nombre.
+            Método toString() para imprimir los detalles de la categoría.
+            Clase Biblioteca:
+
+            Atributos:
+            ArrayList<Libro> libros (referencia a la clase Libro)
+                ArrayList<Autor> autores (referencia a la clase Autor)
+                    ArrayList<Categoria> categorias (referencia a la clase Categoria)
+                        Métodos:
+                        Constructor que inicialice las listas vacías.
+                        Método agregarLibro(Libro libro) que añada un libro a la lista de libros de la biblioteca.
+                        Método agregarAutor(Autor autor) que añada un autor a la lista de autores de la biblioteca.
+                        Método agregarCategoria(Categoria categoria) que añada una categoría a la lista de categorías de la biblioteca.
+                        Método listarLibros() que imprima todos los libros en la biblioteca.
+                        Método listarAutores() que imprima todos los autores en la biblioteca.
+                        Método listarCategorias() que imprima todas las categorías en la biblioteca.
+                        Objetivos:
+                        Crear las clases mencionadas.
+                        Implementar los atributos y métodos requeridos.
+                        Demostrar la funcionalidad de las clases en un método main que haga lo siguiente:
+                        Crear varios autores, libros y categorías.
+                        Asignar libros a autores y categorías a libros.
+                        Agregar autores, libros y categorías a la biblioteca.
+                        Listar todos los libros, autores y categorías presentes en la biblioteca.
+    </p>
+</head>
+<body>
+
+</body>
+</html>
