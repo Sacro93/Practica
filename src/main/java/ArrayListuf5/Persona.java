@@ -15,11 +15,12 @@ public class Persona {
     private String edad;
     private Direccion direccion;
 
-    public Persona(String nombre, String apellidos, String dni, String edad) {
+    public Persona(String nombre, String apellidos, String dni, String edad, Direccion direccion) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.dni = dni;
         this.edad = edad;
+        this.direccion=direccion;
     }
 
     public String getNombre() {
