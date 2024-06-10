@@ -36,19 +36,32 @@ public class Main {
 
 
         List<Libro> librazos = listOf(
-                new Libro("jamas", "123",autorcitos.get(0),categoriasNuevas.get(1) )
-//                new Libro("Nunca", "444",),
-//                new Libro("Holii", "55", ),
-//                new Libro("See", "41",),
-//                new Libro("Siempre", "10", ),
-//                new Libro("Algo", "1",)
+                new Libro("jamas", "123", autorcitos.get(0), Arrays.asList(categoriasNuevas.get(0))),
+                new Libro("Nunca", "444",autorcitos.get(0), Arrays.asList(categoriasNuevas.get(2))),
+                new Libro("Holii", "55", autorcitos.get(1), Arrays.asList(categoriasNuevas.get(3))),
+                new Libro("See", "41",autorcitos.get(2), Arrays.asList(categoriasNuevas.get(3))),
+                new Libro("Siempre", "10", autorcitos.get(2), Arrays.asList(categoriasNuevas.get(2))),
+                new Libro("Algo", "1", autorcitos.get(0), Arrays.asList(categoriasNuevas.get(1)))
 
         );
 
 
-   //nueva biblioteca
+        //nueva biblioteca
 
-        Biblioteca bibliotecaza=new Biblioteca();
+        Biblioteca bibliotecaza = new Biblioteca();
+
+        //Asignar libros a autores
+
+
+//        //asignar a Autores => libros
+//        public void asignarAutor() {
+//            this.libro.add(autor);
+//        }
+//    }
+
+
+    // y categorías a libros.
+
 
 
         //Agregar autores, libros y categorías a la biblioteca.
@@ -69,7 +82,7 @@ public class Main {
 
         //Listar todos los libros, autores y categorías presentes en la biblioteca
 
-    bibliotecaza.listarLibros();
+        bibliotecaza.listarLibros();
 
     }
 }

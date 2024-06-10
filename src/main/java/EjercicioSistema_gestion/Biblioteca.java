@@ -36,12 +36,14 @@ public class Biblioteca {
     }
 
 
+    //asignar a Libros => categorias
 
     //Método agregarAutor(Autor autor) que añada un autor a la lista de autores de la biblioteca.
 
     public void agregarAutor(Autor autor) {
         this.autores.add(autor);
     }
+
     // Método agregarCategoria(Categoria categoria) que añada una categoría a la lista de categorías de la biblioteca.
 
     public void agregarCategoria(Categorias categoria) {
