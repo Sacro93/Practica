@@ -1,5 +1,6 @@
 package EjercicioSistema_gestion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*Clase Biblioteca:
@@ -15,9 +16,12 @@ public class Biblioteca {
     private List<Categorias> categoria;
 
     //Constructor que inicialice las listas vacías.
-    public Biblioteca() {
-    }
 
+    public Biblioteca(){
+        this.libros= new ArrayList<>();
+        this.autores=new ArrayList<>();
+        this.categoria=new ArrayList<>();
+    }
     public Biblioteca(List<Libro> libros, List<Autor> autores, List<Categorias> categorias) {
         this.libros = libros;
         this.autores = autores;
@@ -31,6 +35,8 @@ public class Biblioteca {
         this.libros.add(book);
     }
 
+
+
     //Método agregarAutor(Autor autor) que añada un autor a la lista de autores de la biblioteca.
 
     public void agregarAutor(Autor autor) {
@@ -38,17 +44,10 @@ public class Biblioteca {
     }
     // Método agregarCategoria(Categoria categoria) que añada una categoría a la lista de categorías de la biblioteca.
 
-//    public void agregarCategoria(List<Categorias> categoria) {
-//        this.categoria.addAll(categoria);
-//    }
-
-    //esta bien ???
-    public void agregarCategoria(List<Categorias> categorias){
-        for (Categorias categoria : categorias){
-            categorias.add(categoria);
-
-        }
+    public void agregarCategoria(Categorias categoria) {
+        this.categoria.add(categoria);
     }
+
 
     // Método listarLibros() que imprima todos los libros en la biblioteca.
 
@@ -71,11 +70,6 @@ public class Biblioteca {
         }
     }
 
-    //seria asi sino?
-//    public List<Autor> listarLibros(List<Autor> autorcitos) {
-//
-//        return autorcitos;
-//    }
 
 
     // Método listarCategorias() que imprima todas las categorías en la biblioteca.

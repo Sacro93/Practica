@@ -1,6 +1,7 @@
 package EjercicioSistema_gestion;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static util.MyList.listOf;
@@ -33,26 +34,24 @@ public class Main {
         );
 
 
-        /*El método Arrays.asList() en Java se utiliza para convertir un arreglo (array)
-        o una secuencia de elementos en una lista. En este caso, categorias.get(0) devuelve el primer elemento de la
-        lista categorias, que es un objeto de tipo Categoria.Entonces, Arrays.asList(categorias.get(0)) toma ese objeto Categoria y lo convierte en una lista que
-         contiene un único elemento, que es el objeto Categoria obtenido de categorias.get(0).*/
+
         List<Libro> librazos = listOf(
-                new Libro("jamas", "123", autorcitos.get(1), Arrays.asList(categoriasNuevas.get(0))),
-                new Libro("Nunca", "444", autorcitos.get(1), Arrays.asList(categoriasNuevas.get(1))),
-                new Libro("Holii", "55", autorcitos.get(0), Arrays.asList(categoriasNuevas.get(1))),
-                new Libro("See", "41", autorcitos.get(0), Arrays.asList(categoriasNuevas.get(2))),
-                new Libro("Siempre", "10", autorcitos.get(2), Arrays.asList(categoriasNuevas.get(3))),
-                new Libro("Algo", "1", autorcitos.get(3), Arrays.asList(categoriasNuevas.get(3)))
+                new Libro("jamas", "123",autorcitos.get(0),categoriasNuevas.get(1) )
+//                new Libro("Nunca", "444",),
+//                new Libro("Holii", "55", ),
+//                new Libro("See", "41",),
+//                new Libro("Siempre", "10", ),
+//                new Libro("Algo", "1",)
+
         );
 
 
-    //Agregar autores, libros y categorías a la biblioteca.
+   //nueva biblioteca
 
         Biblioteca bibliotecaza=new Biblioteca();
 
 
-        bibliotecaza.agregarCategoria(categoriasNuevas);
+        //Agregar autores, libros y categorías a la biblioteca.
 
 
         bibliotecaza.agregarAutor(autorcitos.get(0));
@@ -70,7 +69,7 @@ public class Main {
 
         //Listar todos los libros, autores y categorías presentes en la biblioteca
 
-//        bibliotecaza.listarLibros();
+    bibliotecaza.listarLibros();
 
     }
 }

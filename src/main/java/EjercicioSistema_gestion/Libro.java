@@ -22,11 +22,11 @@ public class Libro {
 
     private List<Categorias> categorias;
 
-    public Libro(String titulo, String isbn, Autor autor,List<Categorias> categorias) {
+    public Libro(String titulo, String isbn, Autor autor, List<Categorias> categorias) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.autor = autor;
-        this.categorias = new ArrayList<>();
+   this.categorias = new ArrayList<>();
     }
 
     public String getTitulo() {
