@@ -63,4 +63,15 @@ public class Persona {
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", dni='" + dni + '\'' +
+                ", edad='" + edad + '\'' +
+                ", direccion=" + direccion +
+                '}';
+    }
 }

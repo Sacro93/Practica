@@ -22,10 +22,10 @@ public class Main {
 
         switch (opcion) {
             case 1:
-                    person
+//usar el metodo cargar
                 break;
             case 2:
-
+// usar el metodo listar
                 break;
             case 3:
                 break;

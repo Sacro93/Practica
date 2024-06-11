@@ -9,7 +9,7 @@ public class Lista {
 
     public Lista(List<Persona> listadoPersonas) {
 
-        this.listadoPersonas = new ArrayList<>();
+        this.listadoPersonas = listadoPersonas;
     }
 
 // cargar(): cargar los datos de la tabla anterior en la lista.
@@ -56,6 +56,14 @@ public class Lista {
             }
         }
         return "No se encuentra en la lista";
+    }
+
+    public List<Persona> getListadoPersonas() {
+        return listadoPersonas;
+    }
+
+    public void setListadoPersonas(List<Persona> listadoPersonas) {
+        this.listadoPersonas = listadoPersonas;
     }
 }
 

@@ -27,4 +27,13 @@ public Direccion(String calle,int cp,String provincia){
     public String getProvincia() {
         return provincia;
     }
+
+    @Override
+    public String toString() {
+        return "Direccion{" +
+                "calle='" + calle + '\'' +
+                ", cp=" + cp +
+                ", provincia='" + provincia + '\'' +
+                '}';
+    }
 }
