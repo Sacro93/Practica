@@ -2,66 +2,61 @@ package ArrayListuf5;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-/*Lista: contiene la lista de Personas y los métodos para
-operar con ella. Debe contener los siguientes atributos:
-o lista (ArrayList): ArrayList con el listado de Personas. */
+
 public class Lista {
     private List<Persona> listadoPersonas;
 
-    public Lista() {
+    public Lista(List<Persona> listadoPersonas) {
+
         this.listadoPersonas = new ArrayList<>();
     }
 
+// cargar(): cargar los datos de la tabla anterior en la lista.
 
-    // • listar(): lista todos las personas de la lista.
-    public void listar() {
 
-        for (Persona perso : listadoPersonas) {
-            System.out.println(perso);
-        }
+    public void cargar(Persona persona) {
+          this.listadoPersonas.add(persona);
     }
 
-    //• insertar(): insertar una perslona de final de la lista.
+    // • listar(): lista todos las personas de la lista.
+    public List<Persona> listar() {
+
+        return listadoPersonas;
+    }
+
+
     public void insertar(Persona persona) {
         listadoPersonas.add(persona);
     }
 
     //eliminar(): eliminar una persona de la lista.
     public List<Persona> eliminar(Persona persona) {
-        listadoPersonas.remove(persona);
-        return listadoPersonas;
+        this.listadoPersonas.remove(persona);
+        return this.listadoPersonas;
     }
 
-    public List<Persona> cargar(Persona personita) {
-        Scanner sc = new Scanner(System.in);
-        String string = sc.nextLine();
-        int intt = sc.nextInt();
 
-        System.out.println("Inserte nombre" + listadoPersonas.add(this.n
-        ));
-        System.out.println("Inserte apellido");
-        System.out.println("Inserte DNI");
-        System.out.println("Inserte edad");
-        System.out.println("Inserte calle");
-        System.out.println("Inserte numero");
-        System.out.println("Inserte cp");
-        System.out.println("Inserte provincia");
+    //• contar(): muestra el número de personas de la lista. */
+    public int contar() {
 
+        return listadoPersonas.size();
+    }
+
+
+    // buscar(): busca una Persona por el DNI, si la encuentra, muestra los datos de la persona, en caso contrario monstrar
+    //un mensaje que diga que esa persona no se encuentra en la lista.
+
+    public String buscar(String dni) {
+
+
+        for (Persona persona : listadoPersonas) {
+            if (dni.equals(persona.getDni())) {
+                return persona.toString();
+            }
+        }
+        return "No se encuentra en la lista";
     }
 }
 
-    /*
-   cargar(): cargar los datos de la tabla anterior en la lista.
-
-•
-• contar(): muestra el número de personas de la lista. */
-
-//    public List<Persona> cargar(Persona persona){
-//
-//
-//
-//        }
-//}
 

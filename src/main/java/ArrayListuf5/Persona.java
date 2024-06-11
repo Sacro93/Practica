@@ -23,6 +23,7 @@ public class Persona {
         this.direccion=direccion;
     }
 
+
     public String getNombre() {
         return nombre;
     }
