@@ -49,15 +49,7 @@ public class Main {
         //nueva biblioteca
 
         Biblioteca bibliotecaza = new Biblioteca();
-
         //Asignar libros a autores
-
-
-//        //asignar a Autores => libros
-//        public void asignarAutor() {
-//            this.libro.add(autor);
-//        }
-//    }
 
 
     // y categorías a libros.
