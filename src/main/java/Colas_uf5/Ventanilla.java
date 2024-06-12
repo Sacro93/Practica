@@ -23,12 +23,17 @@ public class Ventanilla {
     public void llegadaVehiculo(Vehiculo autitoQueLlega) {
 
         this.vehiculosEnCola.add(autitoQueLlega);
-
+        System.out.println("Vehículo entra a la cola: " + autitoQueLlega.getMatricula());
     }
 
     public Vehiculo atiendeVehiculo() {
-
-        return vehiculosEnCola.poll();
+        Vehiculo v= vehiculosEnCola.poll();
+        if (v != null) {
+            System.out.println("Vehículo completado: " + v.getMatricula());
+        } else {
+            System.out.println("No quedan más vehículos en la cola.");
+        }
+        return v;
     }
 
 
